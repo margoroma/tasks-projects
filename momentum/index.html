@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/owfont-regular.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Momentum</title>
+</head>
+<body>
+  <header class="header">
+    <div class="player">
+      <div class="player-controls">
+        <button class="play-prev player-icon"></button>
+        <button class="play player-icon"></button>
+        <button class="play-next player-icon"></button>
+      </div>
+      <ul class="play-list"></ul>
+    </div>
+    <div class="container">
+      <div class="glow">
+        <div class="text-container">
+          <div class="next-prev-btn">
+            <button class="back-song"><i class="fa fa-fast-backward"></i></button>
+            <button class="forward-song"><i class="fa fa-fast-forward"></i></button>
+          </div>
+            <br>
+            <span class="text">Song</span>
+            <br>
+            <div class="playback_controls">   
+              <button class="back"><i class="fa fa-backward"></i></button>
+              <button class="play-pause"><i class="fa fa-play"></i><i class="fa fa-pause"></i></button>
+              <button class="stops"><i class="fa fa-stop"></i></button>
+              <button class="forward"><i class="fa fa-forward"></i></button>
+            </div>
+            <br>
+            <div id="seekbar">
+              <input type="range" id="seek" value="0" min="0" max="100" step="0.1">
+            </div>
+            <br>
+            <div class="volume_controls">
+              <button class="mute"><i class="fa fa-volume-up"></i></button>
+              <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
+            </div>
+        </div>
+      </div>
+  </div>
+  <div class="weather">
+    <input type="text" class="city" value="Minsk" />
+    <i class="weather-icon owf"></i>
+    <div class="weather-error"></div>
+    <div class="description-container">
+      <span class="temperature"></span>
+      <span class="weather-description"></span>
+    </div>
+    <div class="wind"></div>
+    <div class="humidity"></div>
+  </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time"></time>
+    <date class="date"></date>
+    <div class="greeting-container">
+      <span class="greeting"></span>
+      <input type="text" class="name" value="" placeholder="[Enter name]"/>
+    </div>
+    <div class="list-todo">
+      <section class="todo" id="todo">
+        <h3 class="todo__title">List ToDo</h3>
+        <input class="todo__input" type="text" placeholder="Add...">
+        <ul class="todo__list"></ul>
+      </section>
+    </div>
+    <div class="pictures"></div>
+  </main>
+  <footer class="footer">
+    <button class="settings"><i class="owf owf-950"></i></button>
+    <div class="sett_menu">
+      <div class="close"></div>
+      <div class="check">
+        <label for="players">Player</label>
+        <input type="checkbox" name="players" id="players" checked="">
+      </div>
+      <div class="check">
+        <label for="weathers">Weather</label>
+        <input type="checkbox" name="weather" id="weathers" checked="">
+      </div>
+      <div class="check">
+        <label for="times">Time</label>
+        <input type="checkbox" name="times" id="times" checked="">
+      </div>
+      <div class="check">
+        <label for="dates">Date</label>
+        <input type="checkbox" name="dates" id="dates" checked="">
+      </div>
+      <div class="check">
+        <label for="greetings">Greeting</label>
+        <input type="checkbox" name="greetings" id="greetings" checked="">
+      </div>
+      <div class="check">
+        <label for="todo-l">ToDo-list</label>
+        <input type="checkbox" name="todo-l" id="todo-l" checked="">
+      </div>
+      <div class="check">
+        <label for="pict">Picture</label>
+        <input type="checkbox" name="pict" id="pict" checked="">
+      </div>
+      <div class="check">
+        <label for="quotes">Quote</label>
+        <input type="checkbox" name="quotes" id="quotes" checked="">
+      </div>
+      <label for="languages" class="languages-label">Language</label>
+      <select name="languages" id="languages">
+        <option value="0" class="en">English</option>
+        <option value="2" class="be">Belarusian</option>
+        <option value="1" class="ru" selected="">Russian</option>        
+      </select>
+      <label for="imgs" class="imgs-label">Select source</label>
+      <select name="images-src" id="imgs">
+        <option value="0" class="github" selected="">GitHub</option>
+        <option value="1" class="unsplash">Unsplash</option>
+        <option value="2" class="flickr">Flickr</option>
+      </select>
+      <label for="tag" class="label-txt">Tags</label>
+      <input type="text" id="tag" placeholder="Nature, Animals, Cars...">
+    </div>
+    <div class="quotes-container">
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="./js/data.json"></script>
+  <script type="module" src="./js/script.js"></script>
+</body>
+</html>
